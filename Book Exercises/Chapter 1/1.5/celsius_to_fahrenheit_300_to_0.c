@@ -1,13 +1,13 @@
 /*
  * Author's name and email: Michael
  * Program description: C to F table from 300C to 0C.
- * Latest version: 31/01/2017 04:03.
- * Older versions: 
+ * Latest version: 04:03 AM, 1/31/2017.
+ * Older versions:
  */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
 	int lower = 0, upper = 300, step = 20;
 	float fahr, celsius = upper;

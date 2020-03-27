@@ -1,8 +1,8 @@
 /*
  * Author's name and email: Michael
  * Program description: Prints one word per row.
- * Latest version: 02/02/2017 02:47.
- * Older versions: 
+ * Latest version: 2:47 AM, 2/2/2017.
+ * Older versions:
  */
 
 #include<stdio.h>
@@ -17,9 +17,9 @@ int main()
 
 	p = OUTSIDE;
 
-	while ((c= getchar()) != EOF)
+	while ((c = getchar()) != EOF)
 	{
-		if ((c == ' ' || c == '\t' || c == '\n') && p == INSIDE){
+		if ((c == ' ' || c == '\t' || c == '\n') && p == INSIDE) {
 			printf("\n");
 			p = OUTSIDE;
 		}
@@ -30,8 +30,7 @@ int main()
 			printf("%c", c);
 			p = INSIDE;
 		}
-	} 
+	}
 
-	getch();
 	return 0;
 }

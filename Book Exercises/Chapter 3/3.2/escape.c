@@ -1,23 +1,23 @@
 /*
  * Author's name and email: learntosolveit.com
- * Program description: escape method converts escape sequences 
+ * Program description: Escape function converts escape sequences
  *  to their string representation. '\n' becomes '\\' + 'n'.
  * Latest version: 1:24 PM, 10/7/2019.
- * Older versions: 
+ * Older versions:
  */
 
 #include <stdio.h>
 
 void escape(char s[], char t[]);
 
-int main(void)
+int main()
 {
 	char s[] = "t\na\tb";
 	char t[20];
 
 	escape(s, t);
 
-	printf("s: %s\n\nt: %s", s, t);
+	printf("s: %s\n\nt: %s\n", s, t);
 
 	return 0;
 }
@@ -32,9 +32,9 @@ void escape(char s[], char t[])
 		switch (s[j])
 		{
 		case '\n':
-				t[i++] = '\\';
-				t[i++] = 'n';
-				break;
+			t[i++] = '\\';
+			t[i++] = 'n';
+			break;
 		case '\t':
 			t[i++] = '\\';
 			t[i++] = 't';

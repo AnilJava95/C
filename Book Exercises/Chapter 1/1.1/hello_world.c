@@ -1,15 +1,15 @@
 /*
  * Author's name and email: Michael
  * Program description: Prints Hello World.
- * Latest version: 30/01/2017 22:55.
- * Older versions: 
+ * Latest version: 10:55 PM, 1/30/2017.
+ * Older versions:
  */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
 	printf("Hello World!\a");
-	
+
 	return 0;
 }

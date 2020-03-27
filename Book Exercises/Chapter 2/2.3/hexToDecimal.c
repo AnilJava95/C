@@ -1,18 +1,18 @@
 /*
  * Author's name and email: Michael, learntosolveit.com
- * Program description: Converts a string of hexadecimal 
- *  digits (including an optinal 0x or 0X) into its 
+ * Program description: Converts a string of hexadecimal
+ *  digits (including an optinal 0x or 0X) into its
  *  equivalent integer value.
  * Latest version: 10:55 AM, 9/27/2019.
- * Older versions: 
+ * Older versions:
  */
- 
+
 #include <stdio.h>
 
 int getline(char line[], int maxline);
 int htoi(char s[]);
 
-int main(void)
+int main()
 {
 	char line[50];
 	int value;
@@ -29,7 +29,7 @@ int getline(char s[], int lim)
 {
 	int c, i;
 
-	for (i = 0; i < lim - 1 && (c = getchar()) != EOF 
+	for (i = 0; i < lim - 1 && (c = getchar()) != EOF
 		&& c != '\n'; ++i)
 		s[i] = c;
 	/*
@@ -46,7 +46,7 @@ int getline(char s[], int lim)
 
 int htoi(char s[])
 {
-	int hexdigit, i, inhex, n;
+	int hexdigit, i, n = 0;
 	i = 0;
 	if (s[i] == '0')
 	{
@@ -55,10 +55,7 @@ int htoi(char s[])
 			++i;
 	}
 
-	n = 0;
-	inhex = 1;
-
-	for (; inhex == 1; ++i)
+	for (int inhex = 1; inhex == 1; ++i)
 	{
 		if (s[i] >= '0' && s[i] <= '9')
 			hexdigit = s[i] - '0';

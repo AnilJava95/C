@@ -1,6 +1,6 @@
 /*
  * Author's name and email: Michael
- * Program description: Display min max values and unsigned max values of 
+ * Program description: Display min, max, and unsigned max values of
  *  char, short, int, long, long long.
  * Latest version: 12:39 PM, 9/29/2019.
  * Older versions:
@@ -8,7 +8,6 @@
 
 #include <stdio.h>
 #include <limits.h>
-#include <float.h>
 
 int main()
 {
@@ -26,7 +25,7 @@ int main()
 
 	printf("LONG LONG_MIN: %20lld\nLONG LONG_MAX: %20lld\n\n", LLONG_MIN, LLONG_MAX);
 	printf("UINT_MAX: %25llu\n\n", ULLONG_MAX);
-	
+
 	getchar();
 	return 0;
 }

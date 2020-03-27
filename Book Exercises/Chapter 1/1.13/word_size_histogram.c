@@ -1,9 +1,10 @@
 /*
  * Author's name and email: Michael
  * Program description: You can either use current version or you
- *  can uncomment mark1s and comment mark2.
- * Latest version: 02/02/2017 06:38.
- * Older versions: 
+ *  can uncomment mark1s and comment mark2 to use asterisks instead 
+ *  of numbers.
+ * Latest version: 6:38 AM, 2/2/2017.
+ * Older versions:
  */
 
 #include <stdio.h>
@@ -11,7 +12,6 @@
 int main(void)
 {
 	char c;
-	//int j;   // mark1
 	int i, wordLength = 0;
 	int lenghtHistorgram[50] = { 0 };
 
@@ -25,19 +25,15 @@ int main(void)
 				wordLength = 0;
 			}
 		}
-		else if (c == EOF)
-			break;
 		else
-		{
 			++wordLength;
-		}
 	}
 
 	for (i = 1; i < 50; i++)
 	{
 		printf("%2d - %3d\n", i, lenghtHistorgram[i]);   // mark 2
 		/*printf("%2d - ", i);   // mark1
-		for (j = 0; j < lenghtHistorgram[i]; j++)
+		for (int j = 0; j < lenghtHistorgram[i]; j++)
 		{
 			printf("*");
 		}

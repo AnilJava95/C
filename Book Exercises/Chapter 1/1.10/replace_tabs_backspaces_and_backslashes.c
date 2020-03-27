@@ -1,18 +1,18 @@
 /*
  * Author's name and email: Michael
- * Program description: Replaces the tabs, backspaces and 
+ * Program description: Replaces the tabs, backspaces and
  *  backslashes in text stream with \t, \b and \\.
- * Latest version: 02/02/2017 01:16.
- * Older versions: 
+ * Latest version: 1:16 AM 2/2/2017.
+ * Older versions:
  */
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
 	char c;
 
-	while ( (c = getchar()) != EOF )
+	while ((c = getchar()) != EOF)
 	{
 		if (c == '\t')
 			printf("\\t");

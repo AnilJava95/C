@@ -26,20 +26,26 @@ int main()
 	return 0;
 }
 
-// Read a line into s, return length.
+// Read a line into s. Return length.
 int getline(char s[], int lim)
 {
-	int c, i;
+	int c, len;
 
-	for (i = 0; i <= lim - 1 && (c = getchar()) != EOF 
-		&& c != '\n'; ++i)
-		s[i] = c;
+	for (len = 0; len <= lim - 1 && (c = getchar()) != EOF &&
+		c != '\n'; ++len)
+		s[len] = c;
+
+	// If last character of the line is a newline, add it to 
+	//  the end of the string and increment line size.
 	if (c == '\n') {
-		s[i] = c;
-		++i;
+		s[len] = c;
+		++len;
 	}
-	s[i] = '\0';
-	return i;
+
+	// Terminate the string with null.
+	s[len] = '\0';
+
+	return len;
 }
 
 // Copy the line backwards to a temp string then copy it 

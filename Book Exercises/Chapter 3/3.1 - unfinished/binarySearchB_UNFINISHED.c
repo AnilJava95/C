@@ -1,13 +1,15 @@
 /*
  * Author's name and email: learntosolveit.com
- * Program description: 
- * Latest version: 
+ * Program description:
+ * Latest version: 12:50 AM, 10/7/2019.
  * Older versions: 
  */
 
 #include <stdio.h>
 
-int main(void)
+int binsearch(int x, int v[], int n);
+
+int main()
 {
 	int arr[] = { 2,4,6,7,9,29,45,46,49,50,51 };
 	printf("%d", binsearch(9, arr, 10));

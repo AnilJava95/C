@@ -12,7 +12,7 @@
 int getline(char line[], int maxline);
 short find(char s1[], char s2[]);
 
-int main(void)
+int main()
 {
 	char s1[50];
 	char s2[50];

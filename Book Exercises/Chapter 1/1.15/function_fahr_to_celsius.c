@@ -1,15 +1,16 @@
 /*
  * Author's name and email: Michael
- * Program description: Uses a function to calculate the conversions.
- * Latest version: 05/02/2017 04:55.
- * Older versions: 
+ * Program description: Uses a function to calculate celsuius
+ *  equivalent of fahrtenheit value.
+ * Latest version: 4:55 AM, 2/5/2017.
+ * Older versions:
  */
 
 #include <stdio.h>
 
 float fahrenheitToCelsius(float fahr);
 
-int main(void)
+int main()
 {
 	int lower = 0, upper = 300, step = 20;
 	float fahr = lower;

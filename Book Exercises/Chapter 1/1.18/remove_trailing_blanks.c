@@ -3,63 +3,70 @@
  * Program description: Removes trailing blanks and tabs from each
  *  line of input and removes entirely blank lines.
  * Latest version: 5:53 PM, 9/17/2019.
- * Older versions: 
+ * Older versions:
  */
 
 #include <stdio.h>
 #define MAXLINE 1000
 
 int getline(char line[], int maxline);
-void copy(char to[], char from[]);
+int removeBlanks(char line[]);
 
-/* print the longest input line */
 main()
 {
-	int len; /* current line length */
-	char line[MAXLINE]; /* current input line */
+	int len; // Current line length.
+	char line[MAXLINE]; // Current input line.
 
 	while ((len = getline(line, MAXLINE)) > 0)
-		if (removeBlanks(line) > 0) 
+		if (removeBlanks(line) > 0)
 			printf("%s", line);
 
 	getchar();
 	return 0;
 }
 
-/* getline: read a line into s, return length */
+// Read a line into s. Return length.
 int getline(char s[], int lim)
 {
-	int c, i;
+	int c, len;
 
-	for (i = 0; i <= lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i)
-		s[i] = c;
+	for (len = 0; len <= lim - 1 && (c = getchar()) != EOF &&
+		c != '\n'; ++len)
+		s[len] = c;
+
+	// If last character of the line is a newline, add it to 
+	//  the end of the string and increment line size.
 	if (c == '\n') {
-		s[i] = c;
-		++i;
+		s[len] = c;
+		++len;
 	}
-	s[i] = '\0';
-	return i;
+
+	// Terminate the string with null.
+	s[len] = '\0';
+
+	return len;
 }
 
 int removeBlanks(char line[])
 {
 	int i;
-	
+
+	// Get the index of the last character before \n.
 	for (i = 0; line[i] != '\n'; i++)
 		;
-	i--; // Doing this to get the index of the last character before \n.
-	
+	i--;
+
 	// Going back to the index where trailing blank starts.
 	while (line[i] == ' ' || line[i] == '\t')
 		i--;
-	
-	if( i >= 0) // Ending the line where trailing blank starts.
-  	{
-    	++i;
-    	line[i] = '\n';
-    	++i;
-    	line[i] = '\0';
+
+	if (i >= 0) // Ending the line where trailing blank starts.
+	{
+		++i;
+		line[i] = '\n';
+		++i;
+		line[i] = '\0';
 	}
-	
-  	return i;
+
+	return i;
 }

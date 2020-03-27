@@ -10,7 +10,7 @@
 
 char setBits(char, char, char);
 
-int main(void)
+int main()
 {
 	char number = 6;
 	char position = 1;
